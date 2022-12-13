@@ -9,6 +9,7 @@
 // ===--------------------------------------------------------------------=== //
 
 #include <Widgets/Frame.h>
+#include <wx/button.h>
 USING_NAMESPACE_WX_WIDGETS_EXAMPLE
 
 

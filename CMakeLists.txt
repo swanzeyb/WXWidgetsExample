@@ -18,6 +18,7 @@ include_directories(Include)
 add_executable(WxWidgetsExample
   Source/App.cpp
   Source/Widgets/Frame.cpp
+  Source/Widgets/Button.cpp
 )
 target_link_libraries(WxWidgetsExample PRIVATE wx::core wx::base)
 
