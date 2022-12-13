@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(WxWidgetsExample VERSION 0.1.0)
+set(CMAKE_CXX_STANDARD 17)
 
 include(FetchContent)
 
@@ -12,7 +13,13 @@ FetchContent_MakeAvailable(wxWidgets)
 include(CTest)
 enable_testing()
 
-add_executable(WxWidgetsExample main.cpp)
+include_directories(Include)
+
+add_executable(WxWidgetsExample
+  Source/App.cpp
+  Source/Widgets/Frame.cpp
+  Source/Widgets/Button.cpp
+)
 target_link_libraries(WxWidgetsExample PRIVATE wx::core wx::base)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
